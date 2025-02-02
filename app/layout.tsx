@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { UserProfile } from "@/components/UserProfile";
 
 export const metadata: Metadata = {
   title: "TimeSync",
@@ -31,17 +32,15 @@ export default function RootLayout({
                 </p>
               </Link>
             </div>
-
-            <div className={"flex gap-4 justify-end"}>
+            <div className="flex justify-end">
+              <UserProfile />
               <Link
                 href="https://github.com/jonatanvm/convai-demo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={"py-0.5"}
                 aria-label="View source on GitHub"
-              >
-                <Button>Get Started</Button>
-              </Link>
+              ></Link>
             </div>
           </nav>
           {children}
